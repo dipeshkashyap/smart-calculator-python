@@ -1,32 +1,31 @@
-# 🧮 Smart Calculator
+# 🧮 Smart Calculator — Python
 
-A professional command-line calculator built with Python.
+A practical Python calculator project built to improve programming skills through real-world development.
 
 ## ✨ Features
 
-- Addition
-- Subtraction
-- Multiplication
-- Division
-- Division-by-zero protection
-- Input validation
-- Calculation history
-- Permanent history storage using JSON
-- Interactive menu
-- Continuous operation
-- Clean function-based structure
+- ➕ Addition
+- ➖ Subtraction
+- ✖️ Multiplication
+- ➗ Division
+- 📜 Calculation history
+- 💾 Persistent history storage
+- 🖥️ Command-line interface
+- ⚡ Fast and lightweight
 
 ## 🛠️ Technologies
 
-- Python 3
+- Python
 - JSON
-- File Handling
+- Git
+- GitHub
 
 ## 📂 Project Structure
 
 ```text
-01-smart-calculator/
+smart-calculator-python/
 │
 ├── main.py
 ├── history.json
-└── README.md
+├── README.md
+└── .gitignore
