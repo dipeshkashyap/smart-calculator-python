@@ -1,0 +1,10 @@
+{
+    "name": "Smart Calculator",
+    "short_name": "Calculator",
+    "description": "Python powered Smart Calculator",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f4f6f8",
+    "theme_color": "#ffffff",
+    "orientation": "portrait"
+}

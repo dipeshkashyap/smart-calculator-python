@@ -1,0 +1,378 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f4f6f8;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 25px 12px;
+}
+
+
+.app {
+    width: 100%;
+    max-width: 430px;
+}
+
+
+/* HEADER */
+
+.app-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+
+.app-header h1 {
+    color: #17202a;
+
+    font-size: 27px;
+}
+
+
+.app-header p {
+    color: #68737d;
+
+    font-size: 14px;
+
+    margin-top: 5px;
+}
+
+
+.version {
+    background: #ffffff;
+
+    padding: 7px 11px;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: #555;
+}
+
+
+/* CALCULATOR */
+
+.calculator {
+    background: #ffffff;
+
+    padding: 18px;
+
+    border-radius: 23px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* DISPLAY */
+
+.display {
+    min-height: 130px;
+
+    background: #f7f8fa;
+
+    border-radius: 17px;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: flex-end;
+
+    overflow: hidden;
+}
+
+
+.previous-display {
+    min-height: 24px;
+
+    color: #89929a;
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+
+.current-display {
+    width: 100%;
+
+    text-align: right;
+
+    color: #17202a;
+
+    font-size: 38px;
+
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+}
+
+
+/* DISPLAY ACTIONS */
+
+.display-actions {
+    height: 35px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.display-actions button {
+    border: none;
+
+    background: transparent;
+
+    color: #69737d;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    padding: 7px 10px;
+}
+
+
+#copy-message {
+    font-size: 12px;
+
+    color: #69737d;
+}
+
+
+/* BUTTON GRID */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+.btn {
+    height: 64px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.1s ease,
+        opacity 0.2s ease;
+}
+
+
+.btn:active {
+    transform: scale(0.94);
+}
+
+
+.number {
+    background: #f1f3f5;
+
+    color: #20262c;
+}
+
+
+.operator {
+    background: #e8edf2;
+
+    color: #20262c;
+}
+
+
+.action {
+    background: #eceff1;
+
+    color: #59636d;
+
+    font-size: 15px;
+}
+
+
+.equals {
+    background: #20262c;
+
+    color: #ffffff;
+}
+
+
+/* HISTORY */
+
+.history-section {
+    margin-top: 23px;
+
+    background: #ffffff;
+
+    padding: 18px;
+
+    border-radius: 19px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+.history-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+
+.history-header h2 {
+    font-size: 18px;
+
+    color: #20262c;
+}
+
+
+#history-count {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #89929a;
+
+    font-size: 11px;
+}
+
+
+.clear-history {
+    border: none;
+
+    background: transparent;
+
+    color: #69737d;
+
+    cursor: pointer;
+}
+
+
+.history-list {
+    max-height: 270px;
+
+    overflow-y: auto;
+}
+
+
+.history-item {
+    padding: 13px 0;
+
+    border-bottom: 1px solid #edf0f2;
+
+    color: #404850;
+
+    font-size: 14px;
+}
+
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+
+.empty-history {
+    padding: 15px 0;
+
+    text-align: center;
+
+    color: #89929a;
+
+    font-size: 14px;
+}
+
+
+/* ERROR */
+
+.error-display {
+    color: #b33a3a !important;
+
+    font-size: 25px !important;
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 18px;
+
+    text-align: center;
+
+    color: #89929a;
+
+    font-size: 12px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 400px) {
+
+    body {
+        padding: 14px 9px;
+    }
+
+    .calculator {
+        padding: 13px;
+    }
+
+    .btn {
+        height: 58px;
+
+        border-radius: 13px;
+    }
+
+    .current-display {
+        font-size: 32px;
+    }
+
+}

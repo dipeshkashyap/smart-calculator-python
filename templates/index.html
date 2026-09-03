@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#ffffff"
+    >
+
+    <meta
+        name="description"
+        content="Smart Calculator V9 - Python powered calculator"
+    >
+
+    <link
+        rel="manifest"
+        href="{{ url_for('static', filename='manifest.json') }}"
+    >
+
+    <title>Smart Calculator V9</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+<main class="app">
+
+    <!-- HEADER -->
+
+    <header class="app-header">
+
+        <div>
+
+            <h1>Smart Calculator</h1>
+
+            <p>Python Powered Calculator</p>
+
+        </div>
+
+        <span class="version">
+            V9
+        </span>
+
+    </header>
+
+
+    <!-- CALCULATOR -->
+
+    <section class="calculator">
+
+        <!-- DISPLAY -->
+
+        <div class="display">
+
+            <div
+                id="previous-display"
+                class="previous-display"
+            ></div>
+
+            <div
+                id="current-display"
+                class="current-display"
+            >
+                0
+            </div>
+
+        </div>
+
+
+        <!-- EXTRA ACTIONS -->
+
+        <div class="display-actions">
+
+            <button id="copy-result">
+                Copy
+            </button>
+
+            <span id="copy-message"></span>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="buttons">
+
+            <button
+                class="btn action"
+                data-action="clear"
+            >
+                AC
+            </button>
+
+            <button
+                class="btn action"
+                data-action="delete"
+            >
+                DEL
+            </button>
+
+            <button
+                class="btn operator"
+                data-action="percent"
+            >
+                %
+            </button>
+
+            <button
+                class="btn operator"
+                data-operator="/"
+            >
+                ÷
+            </button>
+
+
+            <button
+                class="btn number"
+                data-number="7"
+            >
+                7
+            </button>
+
+            <button
+                class="btn number"
+                data-number="8"
+            >
+                8
+            </button>
+
+            <button
+                class="btn number"
+                data-number="9"
+            >
+                9
+            </button>
+
+            <button
+                class="btn operator"
+                data-operator="*"
+            >
+                ×
+            </button>
+
+
+            <button
+                class="btn number"
+                data-number="4"
+            >
+                4
+            </button>
+
+            <button
+                class="btn number"
+                data-number="5"
+            >
+                5
+            </button>
+
+            <button
+                class="btn number"
+                data-number="6"
+            >
+                6
+            </button>
+
+            <button
+                class="btn operator"
+                data-operator="-"
+            >
+                −
+            </button>
+
+
+            <button
+                class="btn number"
+                data-number="1"
+            >
+                1
+            </button>
+
+            <button
+                class="btn number"
+                data-number="2"
+            >
+                2
+            </button>
+
+            <button
+                class="btn number"
+                data-number="3"
+            >
+                3
+            </button>
+
+            <button
+                class="btn operator"
+                data-operator="+"
+            >
+                +
+            </button>
+
+
+            <button
+                class="btn action"
+                data-action="sign"
+            >
+                +/−
+            </button>
+
+            <button
+                class="btn number"
+                data-number="0"
+            >
+                0
+            </button>
+
+            <button
+                class="btn number"
+                data-number="."
+            >
+                .
+            </button>
+
+            <button
+                class="btn equals"
+                data-action="equals"
+            >
+                =
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- HISTORY -->
+
+    <section class="history-section">
+
+        <div class="history-header">
+
+            <div>
+
+                <h2>Calculation History</h2>
+
+                <span id="history-count">
+                    0 calculations
+                </span>
+
+            </div>
+
+            <button
+                id="clear-history"
+                class="clear-history"
+            >
+                Clear
+            </button>
+
+        </div>
+
+
+        <div
+            id="history-list"
+            class="history-list"
+        >
+
+            <p class="empty-history">
+                No calculations yet.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            Smart Calculator V9
+            • Python + Flask
+        </p>
+
+    </footer>
+
+</main>
+
+
+<script
+    src="{{ url_for('static', filename='script.js') }}"
+></script>
+
+</body>
+
+</html>
